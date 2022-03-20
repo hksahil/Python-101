@@ -116,7 +116,7 @@ Path.cwd().mkdir(exist_ok=True)
 # In[11]:
 
 
-example_file=cwd/'Python 101.ipynb'
+example_file=cwd/'Python  .ipynb'
 
 
 # In[12]:

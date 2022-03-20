@@ -103,9 +103,6 @@ parts:
   - file: Chapter files/EXCEPTIONAL HANDLING 101 TITLE.ipynb
     sections:
     - file: Chapter files/Exceptional Handling.ipynb
-  - file: Chapter files/DEBUGGING TITLE.ipynb
-    sections:
-    - file: Chapter files/Debugging 101.ipynb
   - file: Chapter files/Regex Title.ipynb
     sections:
     - file: Chapter files/Regex.ipynb

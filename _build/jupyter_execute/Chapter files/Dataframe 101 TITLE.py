@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Dataframe 101
+# ## Dataframe  
 
 # This chapter covers some useful Dataframe concepts
 

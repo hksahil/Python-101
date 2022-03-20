@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Regex 101
+# ## Regex  
 
 # This chapter covers some useful Regex concepts
 

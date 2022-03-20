@@ -15,8 +15,20 @@
 # - Everything you write in jupyter notebook is stored in RAM.
 #     - Will be removed once you close the file
 
-# In[ ]:
+# ### Jupyter Notebook Shortcuts
 
+# #### If you are inside the cell
 
+# - a-insert cell above
+# - b-insert cell below
+# - c-copy cell
+# - v-paste cell
+# - f-find
 
+# #### If you are outside the cell
 
+# - ESC a-insert cell above
+# - ESC b-insert cell below
+# - ESC c-copy cell
+# - ESC v-paste cell
+# - ESC f-find

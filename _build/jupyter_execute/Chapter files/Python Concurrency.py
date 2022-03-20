@@ -21,7 +21,7 @@
 
 # - Make use of as many Cores as possible to speed up
 
-# ### Computer Architecture Basics 101
+# ### Computer Architecture Basics  
 
 # #### Hardware
 

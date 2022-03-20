@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Debugging 101
+# ## Debugging  
 
 # In[1]:
 

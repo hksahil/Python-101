@@ -3,7 +3,7 @@
 
 # ## String functions on Columns
 
-# ### EDA 101 for columns
+# ### EDA   for columns
 
 # - Source: yt/Chares tech
 

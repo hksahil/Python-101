@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## List 101
+# ## List  
 
 # This chapter covers some useful List concepts
