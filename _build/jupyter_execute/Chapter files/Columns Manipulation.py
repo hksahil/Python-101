@@ -5,8 +5,6 @@
 
 # ### EDA   for columns
 
-# - Source: yt/Chares tech
-
 # In[1]:
 
 

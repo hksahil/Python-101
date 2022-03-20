@@ -1,16 +1,3 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
-
-#Changes to do:
-# To deploy this,take the whole _build>html folder and drop it in netlify's deply section
-#sphinx-book-theme.css->navbar_extra_footer{visibility: hidden;
-
-
-
-
-
-
 format: jb-book
 root: intro
 # options:  # The options key will be applied to all chapters, but not sub-sections
@@ -34,12 +21,50 @@ parts:
     - file: Chapter files/Installing Packages.ipynb
     - file: Chapter files/Importing Packages.ipynb
     - file: Chapter files/Install vs Import.ipynb
+    
+  # Datatypes
   - file: Chapter files/DATA TYPES 101 TITLE.ipynb
     sections:
     - file: Chapter files/Checking datatypes.ipynb
     - file: Chapter files/Changing Datatypes.ipynb
     - file: Chapter files/Converting Data Types - Advance.ipynb
     - file: Chapter files/Data Types Nans.ipynb
+  # String
+  - file: Chapter files/STRING 101 TITLE.ipynb
+    sections:
+    - file: Chapter files/String.ipynb
+    - file: Chapter files/String Functions.ipynb
+    - file: Chapter files/Formatting Strings.ipynb
+  # Boolean
+  - file: Chapter files/BOOLEAN 101 TITLE.ipynb
+    sections:
+    - file: Chapter files/Checking bools.ipynb
+  # List
+  - file: Chapter files/LIST 101 TITLE.ipynb
+    sections:
+    - file: Chapter files/Lists Creation.ipynb
+    - file: Chapter files/Lists Read.ipynb
+    - file: Chapter files/Lists Update.ipynb
+    - file: Chapter files/Lists Delete.ipynb
+    - file: Chapter files/Lists Indexes and Slicing.ipynb
+    - file: Chapter files/List Add.ipynb
+    - file: Chapter files/Lists Joining.ipynb
+    - file: Chapter files/Lists Sorting.ipynb
+    - file: Chapter files/Lists Reversing.ipynb
+    - file: Chapter files/Lists Remove Duplicates.ipynb
+    - file: Chapter files/List to Dictionary.ipynb
+    - file: Chapter files/Changing data type-Lists.ipynb
+    - file: Chapter files/Removing falses from List.ipynb  
+    - file: Chapter files/Lists use cases.ipynb # 5th march,2021  
+  # Dictionary
+  - file: Chapter files/DICTIONARY 101 TITLE.ipynb
+    sections:
+    - file: Chapter files/Dictionaries.ipynb
+    - file: Chapter files/Dictionary Creation.ipynb
+    - file: Chapter files/Dictionaries Comprehension.ipynb
+    - file: Chapter files/Dictionaries Comprehension-Filtering.ipynb
+    - file: Chapter files/Dictionary advance concepts.ipynb
+  # Date and Time
   - file: Chapter files/DateTime 101 TITLE.ipynb
     sections:
     - file: Chapter files/Playing with Date and Time.ipynb
@@ -69,46 +94,13 @@ parts:
     - file: Chapter files/Counter Library.ipynb
     - file: Chapter files/Timing your code.ipynb
     - file: Chapter files/Faster python.ipynb
-  - file: Chapter files/BOOLEAN 101 TITLE.ipynb
-    sections:
-    - file: Chapter files/Checking bools.ipynb
-  - file: Chapter files/STRING 101 TITLE.ipynb
-    sections:
-    - file: Chapter files/String.ipynb
-    - file: Chapter files/String Functions.ipynb
-    - file: Chapter files/Formatting Strings.ipynb
-  - file: Chapter files/LIST 101 TITLE.ipynb
-    sections:
-    - file: Chapter files/Lists Creation.ipynb
-    - file: Chapter files/Lists Read.ipynb
-    - file: Chapter files/Lists Update.ipynb
-    - file: Chapter files/Lists Delete.ipynb
-    - file: Chapter files/Lists Indexes and Slicing.ipynb
-    - file: Chapter files/List Add.ipynb
-    - file: Chapter files/Lists Joining.ipynb
-    - file: Chapter files/Lists Sorting.ipynb
-    - file: Chapter files/Lists Reversing.ipynb
-    - file: Chapter files/Lists Remove Duplicates.ipynb
-    - file: Chapter files/List to Dictionary.ipynb
-    - file: Chapter files/Changing data type-Lists.ipynb
-    - file: Chapter files/Removing falses from List.ipynb  
-    - file: Chapter files/Lists use cases.ipynb # 5th march,2021
-  - file: Chapter files/DICTIONARY 101 TITLE.ipynb
-    sections:
-    - file: Chapter files/Dictionaries.ipynb
-    - file: Chapter files/Dictionary Creation.ipynb
-    - file: Chapter files/Dictionaries Comprehension.ipynb
-    - file: Chapter files/Dictionaries Comprehension-Filtering.ipynb
-    - file: Chapter files/Dictionary advance concepts.ipynb
-  - file: Chapter files/EXCEPTIONAL HANDLING 101 TITLE.ipynb
-    sections:
-    - file: Chapter files/Exceptional Handling.ipynb
+  # Regex
   - file: Chapter files/Regex Title.ipynb
     sections:
     - file: Chapter files/Regex.ipynb
     - file: Chapter files/Examples.ipynb
     - file: Chapter files/re Module.ipynb
-  # for files starts
+  # File Handling
   - file: Chapter files/Working with Files.ipynb
     sections:
     - file: Chapter files/OS Module Title.ipynb
@@ -120,7 +112,10 @@ parts:
     - file: Chapter files/Working with text files.ipynb
     - file: Chapter files/CSV.ipynb
     - file: Chapter files/Automating Excel.ipynb
-  # for files ends
+  # Exception Handling
+  - file: Chapter files/EXCEPTIONAL HANDLING 101 TITLE.ipynb
+    sections:
+    - file: Chapter files/Exceptional Handling.ipynb
   - file: Chapter files/RESOURCES.ipynb
     sections:
     - file: Chapter files/Resources.ipynb

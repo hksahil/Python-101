@@ -5,8 +5,6 @@
 
 # - Search for pattern in dataset
 
-# ### Regex rules
-
 # ### Single Character
 
 # - Note: [] denotes set of characters (once only)

@@ -1,22 +1,13 @@
-# Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
-
 title: Python 101
 author: "<a href='https://sahilchoudhary.com/'>Sahil Choudhary</a> "
 logo: logo1.gif
 page_authors: false
 email: "officialhksahil@gmail.com"
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
-
-# Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: book.tex
-
-# Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - references.bib
 
@@ -36,9 +27,7 @@ launch_buttons:
 # HTML-specific settings
 html:
   google_analytics_id: UA-192065875-1
-  use_issues_button: true
-  use_edit_page_button: true
-  #use_repository_button: true
+  use_repository_button: false
   use_multitoc_numbering: false
  # extra_footer:
   extra_navbar: <p>  </p>     

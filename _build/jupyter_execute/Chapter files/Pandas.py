@@ -17,4 +17,10 @@ import pandas as pd
 
 # ### Dataframe
 
-# - combination of seies
+# - combination of series
+
+# In[ ]:
+
+
+
+

@@ -4,8 +4,8 @@
 # ## Enviroment Variables
 
 # - Passwords,API Keys should not be placed in code
-# - It should be saved in enviroment variables
-# - Replace original passwords by variables and in enviroment variables,set the value of this variable
+# - These should be saved in enviroment variables
+# - Replace original passwords by variables and in enviroment variables,set the value of these variables
 
 # In[1]:
 
@@ -27,4 +27,9 @@ db_password='secret_password'
 # - To access env variables,use os module
 # - db_user=os.environ.get('secret_user')
 # - db_password=os.environ.get('secret_pass')
-#     I
+
+# In[ ]:
+
+
+
+

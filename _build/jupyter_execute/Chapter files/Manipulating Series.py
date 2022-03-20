@@ -36,7 +36,7 @@ s1
 # | Add 5 to every element of series   | s1+5        |
 # | Get elements>3   | s1[s1>3]        |
 # | Get negative elements   | s1[s1>=0]        |
-# | Get if element is 2 or 3   | s1[(s1==2) | (s1==3)]        |
+# | Get if element is 2 or 3   | s1[(s1==2) or (s1==3)]       (Replace or by pipe) |
 # | Find unique values   | pd.unique(series) or df[''].unique       |
 # | Convert series to list   | s1.to_list() (earlier it used to be tolist()       |
 # 

@@ -3,7 +3,7 @@
 
 ```{admonition} Why to use Python 101
 
-👶 Beginer Friendly Notes curated manually in the form of a Book
+👶 Beginner friendly Python notes curated manually in the form of a Book
 
 ✂️ Easy to Copy and reuse Code Snippets
 
@@ -11,13 +11,12 @@
 
 ✍️ Made with Standardized Markdown Syntax
 
-⌛ Live Coding option avaiable to edit the code
+⌛ Live Coding option available to edit the code
 
 🖨️ Export pages as Notebooks or pdfs
 
 🔎 Quick Search feature available
 
-⚡ Integrated with Binder 
 
 ```
 
