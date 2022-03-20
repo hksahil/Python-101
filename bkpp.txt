@@ -1,0 +1,84 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+# To deploy this,take the whole _build>html folder and drop it in netlify's deply section
+
+format: jb-book
+root: intro
+options:  # The options key will be applied to all chapters, but not sub-sections
+  numbered: True
+parts:
+- caption: Windows OS 101
+  sections:
+    - file: Windows Command Line.ipynb
+    - file: List of files in OS.ipynb
+- caption: Modules vs Packages vs Libraries
+  chapters:
+  - file: Modules vs Packages vs Libraries.ipynb
+  - file: Installing Packages.ipynb
+  - file: Importing Packages.ipynb
+  - file: Install vs Import.ipynb
+  - file: CSV.ipynb
+- caption: Data Types 101
+  chapters:
+  - file: Data Types Nans.ipynb
+  - file: Data Types 101.ipynb
+- caption: Looping 101
+  chapters:
+  - file: Break and Continue.ipynb
+- caption: Python Misc Concepts
+  chapters:
+  - file: Zip.ipynb
+  - file: Enumerate.ipynb
+  - file: Variable Destructuring.ipynb
+  - file: Array Destructuring.ipynb
+  - file: Tertiary Operator.ipynb
+  - file: Integer Sequence.ipynb
+  - file: Shallow vs Deep Copy.ipynb
+  - file: Function Defination.ipynb
+  - file: Math Functions.ipynb
+  - file: Mutable vs Immutable.ipynb
+  - file: Counter Library.ipynb
+  - file: Timing your code.ipynb 
+- caption: Boolean 101
+  chapters:
+  - file: Checking bools.ipynb
+- caption: String 101
+  chapters:
+  - file: String.ipynb
+  - file: String Functions.ipynb
+- caption: List 101
+  chapters:
+  - file: Lists Creation.ipynb
+  - file: Lists Read.ipynb
+  - file: Lists Update.ipynb
+  - file: Lists Delete.ipynb
+  - file: Lists Indexes and Slicing.ipynb
+  - file: List Add.ipynb
+  - file: Lists Joining.ipynb
+  - file: Lists Sorting.ipynb
+  - file: Lists Reversing.ipynb
+  - file: Lists Remove Duplicates.ipynb
+  - file: List to Dictionary.ipynb
+  - file: Changing data type-Lists.ipynb
+  - file: Removing falses from List.ipynb 
+- caption: Dictionary 101
+  chapters:
+  - file: Dictionaries.ipynb
+  - file: Dictionary Creation.ipynb
+  - file: Dictionaries Comprehension.ipynb
+  - file: Dictionaries Comprehension-Filtering.ipynb
+  - file: Dictionary advance concepts.ipynb
+- caption: Exceptional Handling 101
+  chapters:
+  - file: Exceptional Handling.ipynb
+- caption: Debugging 101
+  chapters:
+  - file: Debugging 101.ipynb
+- caption: Resources
+  chapters:
+  - file: Resources.ipynb
+
+
+  
+  

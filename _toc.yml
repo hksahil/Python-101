@@ -1,0 +1,158 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+
+#Changes to do:
+# To deploy this,take the whole _build>html folder and drop it in netlify's deply section
+#sphinx-book-theme.css->navbar_extra_footer{visibility: hidden;
+
+
+
+
+
+
+format: jb-book
+root: intro
+# options:  # The options key will be applied to all chapters, but not sub-sections
+  # numbered: True
+parts:
+- caption: Markdown 101
+  numbered: True
+  chapters:
+  - file: Markdown 101.ipynb
+- caption: Python 101
+  numbered: True
+  chapters:
+  - file: WINDOWS OS 101 TITLE.ipynb
+    sections:
+    - file: Windows Command Line.ipynb
+    - file: Enviroment Variables.ipynb
+    - file: Jupyter Notebook Basics.ipynb
+  - file: MODULES VS PACKAGES VS LIBRARIES TITLE.ipynb
+    sections:
+    - file: Modules vs Packages vs Libraries.ipynb
+    - file: Installing Packages.ipynb
+    - file: Importing Packages.ipynb
+    - file: Install vs Import.ipynb
+  - file: DATA TYPES 101 TITLE.ipynb
+    sections:
+    - file: Checking datatypes.ipynb
+    - file: Changing Datatypes.ipynb
+    - file: Converting Data Types - Advance.ipynb
+    - file: Data Types Nans.ipynb
+  - file: DateTime 101 TITLE.ipynb
+    sections:
+    - file: Playing with Date and Time.ipynb
+    - file: DateTime.ipynb
+    - file: Date.ipynb
+    - file: Time.ipynb
+    - file: TimeDelta.ipynb
+    - file: DateTime in Pandas.ipynb
+  - file: LOOPING 101 TITLE.ipynb
+    sections:
+    - file: Break and Continue.ipynb 
+  - file: PYTHON MISC CONCEPTS TITLE.ipynb
+    sections:
+    - file: Zip.ipynb
+    - file: Enumerate.ipynb
+    - file: Any() vs All().ipynb
+    - file: Variable Destructuring.ipynb
+    - file: Array Destructuring.ipynb
+    - file: Tertiary Operator.ipynb
+    - file: Integer Sequence using Range.ipynb
+    - file: Shallow vs Deep Copy.ipynb
+    - file: Function Defination.ipynb
+    - file: Math Functions.ipynb
+    - file: Mutable vs Immutable.ipynb
+    - file: Random module.ipynb
+    - file: Lambda Functions.ipynb
+    - file: Counter Library.ipynb
+    - file: Timing your code.ipynb
+    - file: Faster python.ipynb
+  - file: BOOLEAN 101 TITLE.ipynb
+    sections:
+    - file: Checking bools.ipynb
+  - file: STRING 101 TITLE.ipynb
+    sections:
+    - file: String.ipynb
+    - file: String Functions.ipynb
+    - file: Formatting Strings.ipynb
+  - file: LIST 101 TITLE.ipynb
+    sections:
+    - file: Lists Creation.ipynb
+    - file: Lists Read.ipynb
+    - file: Lists Update.ipynb
+    - file: Lists Delete.ipynb
+    - file: Lists Indexes and Slicing.ipynb
+    - file: List Add.ipynb
+    - file: Lists Joining.ipynb
+    - file: Lists Sorting.ipynb
+    - file: Lists Reversing.ipynb
+    - file: Lists Remove Duplicates.ipynb
+    - file: List to Dictionary.ipynb
+    - file: Changing data type-Lists.ipynb
+    - file: Removing falses from List.ipynb  
+    - file: Lists use cases.ipynb # 5th march,2021
+  - file: DICTIONARY 101 TITLE.ipynb
+    sections:
+    - file: Dictionaries.ipynb
+    - file: Dictionary Creation.ipynb
+    - file: Dictionaries Comprehension.ipynb
+    - file: Dictionaries Comprehension-Filtering.ipynb
+    - file: Dictionary advance concepts.ipynb
+  - file: EXCEPTIONAL HANDLING 101 TITLE.ipynb
+    sections:
+    - file: Exceptional Handling.ipynb
+  - file: DEBUGGING TITLE.ipynb
+    sections:
+    - file: Debugging 101.ipynb
+  - file: Regex Title.ipynb
+    sections:
+    - file: Regex.ipynb
+    - file: Examples.ipynb
+    - file: re Module.ipynb
+  # for files starts
+  - file: Working with Files.ipynb
+    sections:
+    - file: OS Module Title.ipynb
+      sections:
+      - file: OS Module.ipynb
+      - file: List of files in OS.ipynb
+      - file: File paths.ipynb
+      - file: Pathlib.ipynb
+    - file: Working with text files.ipynb
+    - file: CSV.ipynb
+    - file: Automating Excel.ipynb
+  # for files ends
+  - file: RESOURCES.ipynb
+    sections:
+    - file: Resources.ipynb
+  #new
+- caption: Pandas 101
+  numbered: True
+  chapters:
+  - file: Pandas.ipynb
+  - file: Series 101 TITLE.ipynb
+    sections:
+    - file: Creating a series.ipynb
+    - file: Manipulating Series.ipynb
+  - file: Dataframe 101 TITLE.ipynb
+    sections:
+    - file: Creating Dataframes.ipynb
+    - file: Dataframe Inspection.ipynb
+    - file: Indexes.ipynb
+    - file: Changing the index of Dataframe.ipynb
+    - file: Slicing Dataframe.ipynb
+    - file: Filtering with Pandas compared with SQL.ipynb
+    - file: Writting SQL within Pandas.ipynb
+    - file: Renaming Columns.ipynb
+    - file: Columns cleaning.ipynb
+    - file: Columns Manipulation.ipynb
+    - file: Playing with missing values.ipynb
+    - file: Deleting Columns.ipynb
+    - file: Manipulating and Filtering Dataframe.ipynb
+    - file: Applying functions on dataframe.ipynb
+    - file: Finding n largest in Dataframe.ipynb
+    - file: Sorting in Dataframe.ipynb
+    
+   

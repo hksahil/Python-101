@@ -1,0 +1,1322 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14.3. Working with CSV files &#8212; Python 101</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hksahil/Python-101");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="14.11. Working with Excel files" href="Automating%20Excel.html" />
+    <link rel="prev" title="14.2. Working with Text files" href="Working%20with%20text%20files.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-192065875-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo1.PNG" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python 101</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to my Python 101 Notes
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Markdown 101
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Markdown%20101.html">
+   1. Markdown 101
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python 101
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="WINDOWS%20OS%20101%20TITLE.html">
+   1. Windows OS 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Windows%20Command%20Line.html">
+     1.1. Windows Command Line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Enviroment%20Variables.html">
+     1.2. Enviroment Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Jupyter%20Notebook%20Basics.html">
+     1.3. Jupyter Notebook Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="MODULES%20VS%20PACKAGES%20VS%20LIBRARIES%20TITLE.html">
+   2. Modules vs Packages vs Libraries
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Modules%20vs%20Packages%20vs%20Libraries.html">
+     2.1. Module vs Package vs Library
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Installing%20Packages.html">
+     2.3. Installing packages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Importing%20Packages.html">
+     2.4. Importing Packages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Install%20vs%20Import.html">
+     2.7. Install vs Import
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="DATA%20TYPES%20101%20TITLE.html">
+   3. Data Types 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Checking%20datatypes.html">
+     3.1. Checking datatypes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Changing%20Datatypes.html">
+     3.2. Changing Datatypes of Python’s inbuilt types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Converting%20Data%20Types%20-%20Advance.html">
+     3.3. Changing Datatypes of Pandas inbuilt types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Data%20Types%20Nans.html">
+     3.4. Missing Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="DateTime%20101%20TITLE.html">
+   4. Date and Time 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Playing%20with%20Date%20and%20Time.html">
+     4.1. Playing with Date and Time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="DateTime.html">
+     4.2. DateTime
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Date.html">
+     4.3. Date
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Time.html">
+     4.4. Time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="TimeDelta.html">
+     4.5. TimeDelta
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="DateTime%20in%20Pandas.html">
+     4.6. DateTime in Pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="LOOPING%20101%20TITLE.html">
+   5. Looping 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Break%20and%20Continue.html">
+     5.1. Break and Continue
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="PYTHON%20MISC%20CONCEPTS%20TITLE.html">
+   6. Python Misc Concepts
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Zip.html">
+     6.1. Zip
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Enumerate.html">
+     6.3. Enumerate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Any%28%29%20vs%20All%28%29.html">
+     6.5. Any() vs All()
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Variable%20Destructuring.html">
+     6.6. Variable Destructuring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Array%20Destructuring.html">
+     6.7. Array Destructuring
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tertiary%20Operator.html">
+     6.8. Tertiary Operator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Integer%20Sequence%20using%20Range.html">
+     6.9. Integer Sequence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Shallow%20vs%20Deep%20Copy.html">
+     6.10. Shallow vs Deep copy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Function%20Defination.html">
+     6.11. Function Defination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Math%20Functions.html">
+     6.12. Maths Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Mutable%20vs%20Immutable.html">
+     6.13. Mutable vs Immutable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Random%20module.html">
+     6.14. Random Module
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lambda%20Functions.html">
+     6.15. Lambda Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Counter%20Library.html">
+     6.16. Counter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Timing%20your%20code.html">
+     6.17. Timing your Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Faster%20python.html">
+     6.18. Faster Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="BOOLEAN%20101%20TITLE.html">
+   7. Boolean 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Checking%20bools.html">
+     7.1. Checking if true or false
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="STRING%20101%20TITLE.html">
+   8. String 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="String.html">
+     8.1. String
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="String%20Functions.html">
+     8.2. String Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Formatting%20Strings.html">
+     8.3. Formatting Strings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="LIST%20101%20TITLE.html">
+   9. List 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lists%20Creation.html">
+     9.1. List Creation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lists%20Read.html">
+     9.2. Read Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lists%20Update.html">
+     9.3. Update Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lists%20Delete.html">
+     9.4. Delete Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lists%20Indexes%20and%20Slicing.html">
+     9.5. List Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="List%20Add.html">
+     9.7. Add Elements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lists%20Joining.html">
+     9.8. Append 2 lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lists%20Sorting.html">
+     9.9. Sort a list
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lists%20Reversing.html">
+     9.10. Reverse a list
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lists%20Remove%20Duplicates.html">
+     9.11. Remove Duplicates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="List%20to%20Dictionary.html">
+     9.12. List to Dictionary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Changing%20data%20type-Lists.html">
+     9.13. List of Strings to list of ints
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Removing%20falses%20from%20List.html">
+     9.15. Removing Falses from List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lists%20use%20cases.html">
+     9.16. Lists Use cases
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="DICTIONARY%20101%20TITLE.html">
+   10. Dictionary 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Dictionaries.html">
+     10.1. Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Dictionary%20Creation.html">
+     10.2. Dictionary Creation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Dictionaries%20Comprehension.html">
+     10.3. Dictionary Comprehension
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Dictionaries%20Comprehension-Filtering.html">
+     10.4. Dictionary Comprehension - Filtering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Dictionary%20advance%20concepts.html">
+     10.5. Dictionary Advance concepts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="EXCEPTIONAL%20HANDLING%20101%20TITLE.html">
+   11. Exceptional Handling 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exceptional%20Handling.html">
+     11.1. Exceptional Handling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="DEBUGGING%20TITLE.html">
+   12. Debugging
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Debugging%20101.html">
+     12.1. Debugging 101
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Regex%20Title.html">
+   13. Regex 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Regex.html">
+     13.1. Regex rules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Examples.html">
+     13.2. Regex Examples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="re%20Module.html">
+     13.3. re Module
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Working%20with%20Files.html">
+   14. Working with Files 101
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="OS%20Module%20Title.html">
+     14.1. OS Module 101
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="OS%20Module.html">
+       14.1.1. OS Module Basics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="List%20of%20files%20in%20OS.html">
+       14.1.2. Getting the list of all the files from OS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="File%20paths.html">
+       14.1.3. File paths
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Pathlib.html">
+       14.1.4. Pathlib Module
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Working%20with%20text%20files.html">
+     14.2. Working with Text files
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     14.3. Working with CSV files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Automating%20Excel.html">
+     14.11. Working with Excel files
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Pandas 101
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Pandas.html">
+   1. Pandas Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Series%20101%20TITLE.html">
+   2. Series 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Creating%20a%20series.html">
+     2.1. Creating a Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Manipulating%20Series.html">
+     2.2. Manipulating a Series
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Dataframe%20101%20TITLE.html">
+   3. Dataframe 101
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Creating%20Dataframes.html">
+     3.1. Creating a Dataframe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Dataframe%20Inspection.html">
+     3.2. Dataframe Inspection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Indexes.html">
+     3.3. Indexes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Changing%20the%20index%20of%20Dataframe.html">
+     3.4. Reseting Index of Dataframe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Slicing%20Dataframe.html">
+     3.5. Slicing Dataframe using Loc and iLoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Filtering%20with%20Pandas%20compared%20with%20SQL.html">
+     3.6. SQL vs Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Writting%20SQL%20within%20Pandas.html">
+     3.7. Running SQL in Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Renaming%20Columns.html">
+     3.8. Renaming Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Columns%20cleaning.html">
+     3.9. Cleaning Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Columns%20Manipulation.html">
+     3.10. String functions on Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Playing%20with%20missing%20values.html">
+     3.11. Playing with Missing values in dataframe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Deleting%20Columns.html">
+     3.12. Deleting Columns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Manipulating%20and%20Filtering%20Dataframe.html">
+     3.13. Manipulating Dataframe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Applying%20functions%20on%20dataframe.html">
+     3.14. Applying functions on Dataframe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Finding%20n%20largest%20in%20Dataframe.html">
+     3.15. Finding Largest and Smallest  Dataframe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Sorting%20in%20Dataframe.html">
+     3.16. Sorting in Dataframe
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/CSV.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        <a class="issues-button"
+            href="https://github.com/hksahil/Python-101/issues/new?title=Issue%20on%20page%20%2FCSV.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/hksahil/Python-101/master?urlpath=lab/tree/docs/CSV.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   14.3. Working with CSV files
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-does-a-csv-file-looks">
+   14.4. How does  a csv file looks?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-a-csv-file-into-dataframe">
+   14.5. Reading a csv file into dataframe
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skip-the-number-of-lines-at-the-start-of-the-file">
+   14.6. Skip the number of lines at the start of the file
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-only-some-columns-while-importing">
+   14.7. Getting only some columns while importing
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#specifying-the-data-type-explictly-while-importing">
+   14.8. Specifying the data type explictly while importing
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parsing-date-columns-as-dates-instead-of-objects-which-is-the-default-behaviour">
+   14.9. Parsing date columns as dates instead of objects(which is the default behaviour)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-the-dataframe-as-csv">
+   14.10. Saving the Dataframe as csv
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Working with CSV files</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   14.3. Working with CSV files
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-does-a-csv-file-looks">
+   14.4. How does  a csv file looks?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-a-csv-file-into-dataframe">
+   14.5. Reading a csv file into dataframe
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skip-the-number-of-lines-at-the-start-of-the-file">
+   14.6. Skip the number of lines at the start of the file
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-only-some-columns-while-importing">
+   14.7. Getting only some columns while importing
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#specifying-the-data-type-explictly-while-importing">
+   14.8. Specifying the data type explictly while importing
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parsing-date-columns-as-dates-instead-of-objects-which-is-the-default-behaviour">
+   14.9. Parsing date columns as dates instead of objects(which is the default behaviour)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-the-dataframe-as-csv">
+   14.10. Saving the Dataframe as csv
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="working-with-csv-files">
+<h1><span class="section-number">14.3. </span>Working with CSV files<a class="headerlink" href="#working-with-csv-files" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="how-does-a-csv-file-looks">
+<h1><span class="section-number">14.4. </span>How does  a csv file looks?<a class="headerlink" href="#how-does-a-csv-file-looks" title="Permalink to this headline">¶</a></h1>
+<p>Name,Hire Date,Salary,Sick Days remaining</p>
+<p>Graham Chapman,03/15/14,50000.00,10</p>
+<p>John Cleese,06/01/15,65000.00,8</p>
+<p>Eric Idle,05/12/14,45000.00,10</p>
+<p>Terry Jones,11/01/13,70000.00,3</p>
+<p>Terry Gilliam,08/12/14,48000.00,7</p>
+<p>Michael Palin,05/23/13,66000.00,8</p>
+<p>Functions to play with csvs are present in Pandas,so import pandas</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="reading-a-csv-file-into-dataframe">
+<h1><span class="section-number">14.5. </span>Reading a csv file into dataframe<a class="headerlink" href="#reading-a-csv-file-into-dataframe" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;demo.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>             Name Hire Date   Salary  Sick Days remaining
+0  Graham Chapman  03/15/14  50000.0                   10
+1     John Cleese  06/01/15  65000.0                    8
+2       Eric Idle  05/12/14  45000.0                   10
+3     Terry Jones  11/01/13  70000.0                    3
+4   Terry Gilliam  08/12/14  48000.0                    7
+5   Michael Palin  05/23/13  66000.0                    8
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="skip-the-number-of-lines-at-the-start-of-the-file">
+<h1><span class="section-number">14.6. </span>Skip the number of lines at the start of the file<a class="headerlink" href="#skip-the-number-of-lines-at-the-start-of-the-file" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;demo.csv&quot;</span><span class="p">,</span> <span class="n">skiprows</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Graham Chapman</th>
+      <th>03/15/14</th>
+      <th>50000.00</th>
+      <th>10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>John Cleese</td>
+      <td>06/01/15</td>
+      <td>65000.0</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Eric Idle</td>
+      <td>05/12/14</td>
+      <td>45000.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Terry Jones</td>
+      <td>11/01/13</td>
+      <td>70000.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Terry Gilliam</td>
+      <td>08/12/14</td>
+      <td>48000.0</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Michael Palin</td>
+      <td>05/23/13</td>
+      <td>66000.0</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="getting-only-some-columns-while-importing">
+<h1><span class="section-number">14.7. </span>Getting only some columns while importing<a class="headerlink" href="#getting-only-some-columns-while-importing" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;demo.csv&#39;</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span><span class="s1">&#39;Salary&#39;</span><span class="p">])</span> <span class="c1"># you can also use indexes as 0,1,2,3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Graham Chapman</td>
+      <td>50000.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>John Cleese</td>
+      <td>65000.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Eric Idle</td>
+      <td>45000.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Terry Jones</td>
+      <td>70000.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Terry Gilliam</td>
+      <td>48000.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Michael Palin</td>
+      <td>66000.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="specifying-the-data-type-explictly-while-importing">
+<h1><span class="section-number">14.8. </span>Specifying the data type explictly while importing<a class="headerlink" href="#specifying-the-data-type-explictly-while-importing" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;demo.csv&#39;</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Salary&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name                    object
+Hire Date               object
+Salary                 float64
+Sick Days remaining      int64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="parsing-date-columns-as-dates-instead-of-objects-which-is-the-default-behaviour">
+<h1><span class="section-number">14.9. </span>Parsing date columns as dates instead of objects(which is the default behaviour)<a class="headerlink" href="#parsing-date-columns-as-dates-instead-of-objects-which-is-the-default-behaviour" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;demo.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Hire Date&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name                           object
+Hire Date              datetime64[ns]
+Salary                        float64
+Sick Days remaining             int64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="saving-the-dataframe-as-csv">
+<h1><span class="section-number">14.10. </span>Saving the Dataframe as csv<a class="headerlink" href="#saving-the-dataframe-as-csv" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;demo2.csv&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># The index false removes the first column of 0,1,2,3 that was added by default</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hksahil/Python-101",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Working%20with%20text%20files.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">14.2. </span>Working with Text files</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Automating%20Excel.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">14.11. </span>Working with Excel files</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sahil Choudhary<br/>
+    
+      <div class="extra_footer">
+        <div> Made with ❤️ by Sahil Choudhary </div>
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

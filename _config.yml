@@ -1,0 +1,52 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Python 101
+author: Sahil Choudhary
+logo: logo1.PNG
+page_authors: false
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/hksahil/Python-101  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+
+
+launch_buttons:
+  notebook_interface: "jupyterlab"  # or "classic"
+  thebe                  : true
+
+#######################################################################################
+# HTML-specific settings
+html:
+  google_analytics_id: UA-192065875-1
+  use_issues_button: true
+  #use_repository_button: true
+  use_multitoc_numbering: false
+  extra_footer:
+        <div>
+            Made with ❤️ by Sahil Choudhary
+        </div>
+  #extra_navbar:<a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star" aria-label="Star ntkme/github-buttons on GitHub">Star</a>   
+  comments:
+    utterances:
+      repo: "hksahil/Python-101"
+sphinx:
+  config:
+    html_show_copyright: false
+    #html_js_files: https://buttons.github.io/buttons.js
