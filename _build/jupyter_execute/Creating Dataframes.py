@@ -29,7 +29,7 @@ df=pd.read_clipboard()
 
 # ### From List
 
-# In[15]:
+# In[4]:
 
 
 Name=['Sahil', 'Sonia', 'Sourav', 'Vishal']
@@ -41,7 +41,7 @@ print(pd.DataFrame(list(zip(Name,Age)),columns=['Name','Age']))
 
 # #### Custom indexes
 
-# In[34]:
+# In[5]:
 
 
 df=pd.DataFrame(list(zip(Name,Age)))
@@ -51,7 +51,7 @@ print(df)
 
 # ### From Single Series
 
-# In[21]:
+# In[6]:
 
 
 s1=pd.Series(['A','B','C','D'])
@@ -62,7 +62,7 @@ print(s1.to_frame(name='Alphabets'))
 
 # ### From Multiple series as columns of dataframe
 
-# In[28]:
+# In[7]:
 
 
 s1=pd.Series(['A','B','C','D'])
@@ -73,7 +73,7 @@ s1.to_frame(name = 'Name').join(s2.to_frame(name='Age'))
 
 # ### From dictionary
 
-# In[23]:
+# In[8]:
 
 
 df=pd.DataFrame({'Name':['Sahil', 'Sonia', 'Sourav', 'Vishal'],
@@ -83,7 +83,7 @@ df
 
 # #### Assigning indexes after declaring the series
 
-# In[26]:
+# In[9]:
 
 
 new_indexes=['a','b','c','d']
@@ -93,13 +93,13 @@ df
 
 # ### From csv
 
-# In[37]:
+# In[10]:
 
 
 df = pd.read_csv ('https://people.sc.fsu.edu/~jburkardt/data/csv/crash_catalonia.csv')
 
 
-# In[39]:
+# In[11]:
 
 
 df
@@ -107,7 +107,7 @@ df
 
 # #### Import specific columns
 
-# In[41]:
+# In[12]:
 
 
 pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/crash_catalonia.csv', usecols= ['Day of Week'])
@@ -115,7 +115,7 @@ pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/crash_catalonia.csv',
 
 # #### Replacing nans
 
-# In[42]:
+# In[13]:
 
 
 pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/crash_catalonia.csv', na_values=['NA','np.nan'])
@@ -123,7 +123,7 @@ pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/crash_catalonia.csv',
 
 # #### Read only first n rows
 
-# In[43]:
+# In[14]:
 
 
 pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/crash_catalonia.csv',nrows=3)

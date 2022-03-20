@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -40,6 +41,7 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/custom.js"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -815,7 +817,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  <p>  </p>
 </div>
 
 </div>
@@ -1107,97 +1109,6 @@ Index: []
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_clipboard</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StopIteration</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\parsers\python_parser.py</span> in <span class="ni">_infer_columns</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">375</span>                 <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">376</span>                     <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffered_line</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">377</span> 
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\parsers\python_parser.py</span> in <span class="ni">_buffered_line</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">583</span>         <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">584</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_line</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span> 
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\parsers\python_parser.py</span> in <span class="ni">_next_line</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">680</span>             <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">681</span>                 <span class="n">orig_line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_iter_line</span><span class="p">(</span><span class="n">row_num</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">682</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\parsers\python_parser.py</span> in <span class="ni">_next_iter_line</span><span class="nt">(self, row_num)</span>
-<span class="g g-Whitespace">    </span><span class="mi">741</span>             <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="ne">--&gt; </span><span class="mi">742</span>             <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">743</span>         <span class="k">except</span> <span class="n">csv</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="ne">StopIteration</span>: 
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">EmptyDataError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">8</span><span class="n">aa785b0b4bd</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_clipboard</span><span class="p">()</span>
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\clipboards.py</span> in <span class="ni">read_clipboard</span><span class="nt">(sep, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">81</span>         <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> 
-<span class="ne">---&gt; </span><span class="mi">83</span>     <span class="k">return</span> <span class="n">read_csv</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="n">sep</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span> 
-<span class="g g-Whitespace">     </span><span class="mi">85</span> 
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\util\_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span> 
-<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\parsers\readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span> 
-<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> 
-<span class="g g-Whitespace">    </span><span class="mi">588</span> 
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\parsers\readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> 
-<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span> 
-<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\parsers\readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">810</span> 
-<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">812</span> 
-<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\parsers\readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\parsers\python_parser.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">num_original_columns</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">112</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">unnamed_cols</span><span class="p">,</span>
-<span class="ne">--&gt; </span><span class="mi">113</span>             <span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_infer_columns</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span>         <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span>             <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nn">c:\users\sahil choudhary\appdata\local\programs\python\python37-32\lib\site-packages\pandas\io\parsers\python_parser.py</span> in <span class="ni">_infer_columns</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">396</span> 
-<span class="g g-Whitespace">    </span><span class="mi">397</span>                     <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">names</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">398</span>                         <span class="k">raise</span> <span class="n">EmptyDataError</span><span class="p">(</span><span class="s2">&quot;No columns to parse from file&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">    </span><span class="mi">399</span> 
-<span class="g g-Whitespace">    </span><span class="mi">400</span>                     <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">names</span><span class="p">[:]</span>
-
-<span class="ne">EmptyDataError</span>: No columns to parse from file
 </pre></div>
 </div>
 </div>
@@ -1774,10 +1685,10 @@ Fourth  Vishal  18
     <footer class="footer">
   <p>
     
-      By Sahil Choudhary<br/>
+      By <a href='https://sahilchoudhary.com/'>Sahil Choudhary</a> <br/>
     
       <div class="extra_footer">
-        <div> Made with ❤️ by Sahil Choudhary </div>
+        <p> <a href="https://www.buymeacoffee.com/hksahil"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Be me a coffee"></a> <a href="https://github.com/hksahil/Python-101"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Github"></a> </p>
       </div>
   </p>
 </footer>
