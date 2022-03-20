@@ -1,12 +1,34 @@
-# Welcome to my Python 101 Notes
+# Introduction to the Book
 
--   Digitized Python Notes curated manually
--   Made with Markdown syntax on jupyter notebook
--   Hosted on Github
--   New Topic on Python every weekend
--   Pandas and Numpy to be added soon
--   Repository structure to be organized soon
--   Author: https://sahilchoudhary.com/
+
+```{admonition} Why to use Python 101
+
+👶 Beginer Friendly Notes curated manually in the form of a Book
+
+✂️ Easy to Copy and reuse Code Snippets
+
+💬 Comments to share conversations or ask questions on any page
+
+✍️ Made with Standardized Markdown Syntax
+
+⌛ Live Coding option avaiable to edit the code
+
+🖨️ Export pages as Notebooks or pdfs
+
+🔎 Quick Search feature available
+
+⚡ Integrated with Binder 
+
+```
+
+
+```{admonition} Sections to be added soon
+:class: tip
+
+👫 GIT
+
+🤖 Machine Learning
+```
 
 
 ## Go from this

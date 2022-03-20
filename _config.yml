@@ -3,8 +3,9 @@
 
 title: Python 101
 author: "<a href='https://sahilchoudhary.com/'>Sahil Choudhary</a> "
-logo: logo1.PNG
+logo: logo1.gif
 page_authors: false
+email: "officialhksahil@gmail.com"
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
@@ -36,6 +37,7 @@ launch_buttons:
 html:
   google_analytics_id: UA-192065875-1
   use_issues_button: true
+  use_edit_page_button: true
   #use_repository_button: true
   use_multitoc_numbering: false
  # extra_footer:

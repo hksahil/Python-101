@@ -11,9 +11,4 @@
 #             - where x>4 won't work because no space before and after > symbol
 # - Source: yt/chartexplorer/change column data type
 # - https://mermaid-js.github.io/mermaid/#/ - Make gantt charts,flow diagrams via markdown
-
-# In[ ]:
-
-
-
-
+# - https://github.com/alexandresanlim/Badges4-README.md-Profile - Easy to use badges for footers

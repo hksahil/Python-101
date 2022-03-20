@@ -119,6 +119,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo1.gif" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Python 101</h1>
@@ -144,7 +149,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Markdown%20101.html">
-   1. Markdown
+   1. Markdown Rules
   </a>
  </li>
 </ul>
@@ -561,7 +566,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="EXCEPTIONAL%20HANDLING%20101%20TITLE.html">
-   11. Exceptional Handling
+   11. Exception Handling
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
   <label for="toctree-checkbox-11">
@@ -577,8 +582,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="DEBUGGING%20TITLE.html">
-   12. Debugging
+  <a class="reference internal" href="Regex%20Title.html">
+   12. Regex
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
   <label for="toctree-checkbox-12">
@@ -587,15 +592,25 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Debugging%20101.html">
-     12.1. Debugging
+    <a class="reference internal" href="Regex.html">
+     12.1. Regex rules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Examples.html">
+     12.2. Regex Examples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="re%20Module.html">
+     12.3. re Module
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Regex%20Title.html">
-   13. Regex
+  <a class="reference internal" href="Working%20with%20Files.html">
+   13. Working with Files
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
   <label for="toctree-checkbox-13">
@@ -603,78 +618,51 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Regex.html">
-     13.1. Regex rules
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Examples.html">
-     13.2. Regex Examples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="re%20Module.html">
-     13.3. re Module
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Working%20with%20Files.html">
-   14. Working with Files
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="OS%20Module%20Title.html">
-     14.1. OS Module
+     13.1. OS Module
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="OS%20Module.html">
-       14.1.1. OS Module Basics
+       13.1.1. OS Module Basics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="List%20of%20files%20in%20OS.html">
-       14.1.2. Getting the list of all the files from OS
+       13.1.2. Getting the list of all the files from OS
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="File%20paths.html">
-       14.1.3. File paths
+       13.1.3. File paths
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="Pathlib.html">
-       14.1.4. Pathlib Module
+       13.1.4. Pathlib Module
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Working%20with%20text%20files.html">
-     14.2. Working with Text files
+     13.2. Working with Text files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="CSV.html">
-     14.3. Working with CSV files
+     13.3. Working with CSV files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Automating%20Excel.html">
-     14.11. Working with Excel files
+     13.11. Working with Excel files
     </a>
    </li>
   </ul>
@@ -695,8 +683,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="Series%20101%20TITLE.html">
    2. Series
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -717,8 +705,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="Dataframe%20101%20TITLE.html">
    3. Dataframe
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-  <label for="toctree-checkbox-17">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -861,7 +849,9 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/hksahil/Python-101/issues/new?title=Issue%20on%20page%20%2FChapter files/Renaming Columns.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
+        <a class="edit-button" href="https://github.com/hksahil/Python-101/edit/master/docs/Chapter files/Renaming Columns.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
