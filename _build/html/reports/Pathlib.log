@@ -36,6 +36,6 @@ for file in folder.iterdir():
 [0m[0;32m   1103[0m             [1;32mif[0m [0mname[0m [1;32min[0m [1;33m{[0m[1;34m'.'[0m[1;33m,[0m [1;34m'..'[0m[1;33m}[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
 [0;32m   1104[0m                 [1;31m# Yielding a path object for these makes little sense[0m[1;33m[0m[1;33m[0m[1;33m[0m[0m
 
-[1;31mFileNotFoundError[0m: [WinError 3] The system cannot find the path specified: 'C:\\Users\\Sahil Choudhary\\Book\\Python\\_build\\subfolder'
-FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\Sahil Choudhary\\Book\\Python\\_build\\subfolder'
+[1;31mFileNotFoundError[0m: [WinError 3] The system cannot find the path specified: 'C:\\Users\\Sahil Choudhary\\Book\\Python\\Chapter files\\_build\\subfolder'
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\Sahil Choudhary\\Book\\Python\\Chapter files\\_build\\subfolder'
 

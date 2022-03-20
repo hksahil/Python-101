@@ -19,140 +19,138 @@ parts:
 - caption: Markdown 101
   numbered: True
   chapters:
-  - file: Markdown 101.ipynb
+  - file: Chapter files/Markdown 101.ipynb
 - caption: Python 101
   numbered: True
   chapters:
-  - file: WINDOWS OS 101 TITLE.ipynb
+  - file: Chapter files/WINDOWS OS 101 TITLE.ipynb
     sections:
-    - file: Windows Command Line.ipynb
-    - file: Enviroment Variables.ipynb
-    - file: Jupyter Notebook Basics.ipynb
-  - file: MODULES VS PACKAGES VS LIBRARIES TITLE.ipynb
+    - file: Chapter files/Windows Command Line.ipynb
+    - file: Chapter files/Enviroment Variables.ipynb
+    - file: Chapter files/Jupyter Notebook Basics.ipynb
+  - file: Chapter files/MODULES VS PACKAGES VS LIBRARIES TITLE.ipynb
     sections:
-    - file: Modules vs Packages vs Libraries.ipynb
-    - file: Installing Packages.ipynb
-    - file: Importing Packages.ipynb
-    - file: Install vs Import.ipynb
-  - file: DATA TYPES 101 TITLE.ipynb
+    - file: Chapter files/Modules vs Packages vs Libraries.ipynb
+    - file: Chapter files/Installing Packages.ipynb
+    - file: Chapter files/Importing Packages.ipynb
+    - file: Chapter files/Install vs Import.ipynb
+  - file: Chapter files/DATA TYPES 101 TITLE.ipynb
     sections:
-    - file: Checking datatypes.ipynb
-    - file: Changing Datatypes.ipynb
-    - file: Converting Data Types - Advance.ipynb
-    - file: Data Types Nans.ipynb
-  - file: DateTime 101 TITLE.ipynb
+    - file: Chapter files/Checking datatypes.ipynb
+    - file: Chapter files/Changing Datatypes.ipynb
+    - file: Chapter files/Converting Data Types - Advance.ipynb
+    - file: Chapter files/Data Types Nans.ipynb
+  - file: Chapter files/DateTime 101 TITLE.ipynb
     sections:
-    - file: Playing with Date and Time.ipynb
-    - file: DateTime.ipynb
-    - file: Date.ipynb
-    - file: Time.ipynb
-    - file: TimeDelta.ipynb
-    - file: DateTime in Pandas.ipynb
-  - file: LOOPING 101 TITLE.ipynb
+    - file: Chapter files/Playing with Date and Time.ipynb
+    - file: Chapter files/DateTime.ipynb
+    - file: Chapter files/Date.ipynb
+    - file: Chapter files/Time.ipynb
+    - file: Chapter files/TimeDelta.ipynb
+    - file: Chapter files/DateTime in Pandas.ipynb
+  - file: Chapter files/LOOPING 101 TITLE.ipynb
     sections:
-    - file: Break and Continue.ipynb 
-  - file: PYTHON MISC CONCEPTS TITLE.ipynb
+    - file: Chapter files/Break and Continue.ipynb 
+  - file: Chapter files/PYTHON MISC CONCEPTS TITLE.ipynb
     sections:
-    - file: Zip.ipynb
-    - file: Enumerate.ipynb
-    - file: Any() vs All().ipynb
-    - file: Variable Destructuring.ipynb
-    - file: Array Destructuring.ipynb
-    - file: Tertiary Operator.ipynb
-    - file: Integer Sequence using Range.ipynb
-    - file: Shallow vs Deep Copy.ipynb
-    - file: Function Defination.ipynb
-    - file: Math Functions.ipynb
-    - file: Mutable vs Immutable.ipynb
-    - file: Random module.ipynb
-    - file: Lambda Functions.ipynb
-    - file: Counter Library.ipynb
-    - file: Timing your code.ipynb
-    - file: Faster python.ipynb
-  - file: BOOLEAN 101 TITLE.ipynb
+    - file: Chapter files/Zip.ipynb
+    - file: Chapter files/Enumerate.ipynb
+    - file: Chapter files/Any() vs All().ipynb
+    - file: Chapter files/Variable Destructuring.ipynb
+    - file: Chapter files/Array Destructuring.ipynb
+    - file: Chapter files/Tertiary Operator.ipynb
+    - file: Chapter files/Integer Sequence using Range.ipynb
+    - file: Chapter files/Shallow vs Deep Copy.ipynb
+    - file: Chapter files/Function Defination.ipynb
+    - file: Chapter files/Math Functions.ipynb
+    - file: Chapter files/Mutable vs Immutable.ipynb
+    - file: Chapter files/Random module.ipynb
+    - file: Chapter files/Lambda Functions.ipynb
+    - file: Chapter files/Counter Library.ipynb
+    - file: Chapter files/Timing your code.ipynb
+    - file: Chapter files/Faster python.ipynb
+  - file: Chapter files/BOOLEAN 101 TITLE.ipynb
     sections:
-    - file: Checking bools.ipynb
-  - file: STRING 101 TITLE.ipynb
+    - file: Chapter files/Checking bools.ipynb
+  - file: Chapter files/STRING 101 TITLE.ipynb
     sections:
-    - file: String.ipynb
-    - file: String Functions.ipynb
-    - file: Formatting Strings.ipynb
-  - file: LIST 101 TITLE.ipynb
+    - file: Chapter files/String.ipynb
+    - file: Chapter files/String Functions.ipynb
+    - file: Chapter files/Formatting Strings.ipynb
+  - file: Chapter files/LIST 101 TITLE.ipynb
     sections:
-    - file: Lists Creation.ipynb
-    - file: Lists Read.ipynb
-    - file: Lists Update.ipynb
-    - file: Lists Delete.ipynb
-    - file: Lists Indexes and Slicing.ipynb
-    - file: List Add.ipynb
-    - file: Lists Joining.ipynb
-    - file: Lists Sorting.ipynb
-    - file: Lists Reversing.ipynb
-    - file: Lists Remove Duplicates.ipynb
-    - file: List to Dictionary.ipynb
-    - file: Changing data type-Lists.ipynb
-    - file: Removing falses from List.ipynb  
-    - file: Lists use cases.ipynb # 5th march,2021
-  - file: DICTIONARY 101 TITLE.ipynb
+    - file: Chapter files/Lists Creation.ipynb
+    - file: Chapter files/Lists Read.ipynb
+    - file: Chapter files/Lists Update.ipynb
+    - file: Chapter files/Lists Delete.ipynb
+    - file: Chapter files/Lists Indexes and Slicing.ipynb
+    - file: Chapter files/List Add.ipynb
+    - file: Chapter files/Lists Joining.ipynb
+    - file: Chapter files/Lists Sorting.ipynb
+    - file: Chapter files/Lists Reversing.ipynb
+    - file: Chapter files/Lists Remove Duplicates.ipynb
+    - file: Chapter files/List to Dictionary.ipynb
+    - file: Chapter files/Changing data type-Lists.ipynb
+    - file: Chapter files/Removing falses from List.ipynb  
+    - file: Chapter files/Lists use cases.ipynb # 5th march,2021
+  - file: Chapter files/DICTIONARY 101 TITLE.ipynb
     sections:
-    - file: Dictionaries.ipynb
-    - file: Dictionary Creation.ipynb
-    - file: Dictionaries Comprehension.ipynb
-    - file: Dictionaries Comprehension-Filtering.ipynb
-    - file: Dictionary advance concepts.ipynb
-  - file: EXCEPTIONAL HANDLING 101 TITLE.ipynb
+    - file: Chapter files/Dictionaries.ipynb
+    - file: Chapter files/Dictionary Creation.ipynb
+    - file: Chapter files/Dictionaries Comprehension.ipynb
+    - file: Chapter files/Dictionaries Comprehension-Filtering.ipynb
+    - file: Chapter files/Dictionary advance concepts.ipynb
+  - file: Chapter files/EXCEPTIONAL HANDLING 101 TITLE.ipynb
     sections:
-    - file: Exceptional Handling.ipynb
-  - file: DEBUGGING TITLE.ipynb
+    - file: Chapter files/Exceptional Handling.ipynb
+  - file: Chapter files/DEBUGGING TITLE.ipynb
     sections:
-    - file: Debugging 101.ipynb
-  - file: Regex Title.ipynb
+    - file: Chapter files/Debugging 101.ipynb
+  - file: Chapter files/Regex Title.ipynb
     sections:
-    - file: Regex.ipynb
-    - file: Examples.ipynb
-    - file: re Module.ipynb
+    - file: Chapter files/Regex.ipynb
+    - file: Chapter files/Examples.ipynb
+    - file: Chapter files/re Module.ipynb
   # for files starts
-  - file: Working with Files.ipynb
+  - file: Chapter files/Working with Files.ipynb
     sections:
-    - file: OS Module Title.ipynb
+    - file: Chapter files/OS Module Title.ipynb
       sections:
-      - file: OS Module.ipynb
-      - file: List of files in OS.ipynb
-      - file: File paths.ipynb
-      - file: Pathlib.ipynb
-    - file: Working with text files.ipynb
-    - file: CSV.ipynb
-    - file: Automating Excel.ipynb
+      - file: Chapter files/OS Module.ipynb
+      - file: Chapter files/List of files in OS.ipynb
+      - file: Chapter files/File paths.ipynb
+      - file: Chapter files/Pathlib.ipynb
+    - file: Chapter files/Working with text files.ipynb
+    - file: Chapter files/CSV.ipynb
+    - file: Chapter files/Automating Excel.ipynb
   # for files ends
-  - file: RESOURCES.ipynb
+  - file: Chapter files/RESOURCES.ipynb
     sections:
-    - file: Resources.ipynb
+    - file: Chapter files/Resources.ipynb
   #new
 - caption: Pandas 101
   numbered: True
   chapters:
-  - file: Pandas.ipynb
-  - file: Series 101 TITLE.ipynb
+  - file: Chapter files/Pandas.ipynb
+  - file: Chapter files/Series 101 TITLE.ipynb
     sections:
-    - file: Creating a series.ipynb
-    - file: Manipulating Series.ipynb
-  - file: Dataframe 101 TITLE.ipynb
+    - file: Chapter files/Creating a series.ipynb
+    - file: Chapter files/Manipulating Series.ipynb
+  - file: Chapter files/Dataframe 101 TITLE.ipynb
     sections:
-    - file: Creating Dataframes.ipynb
-    - file: Dataframe Inspection.ipynb
-    - file: Indexes.ipynb
-    - file: Changing the index of Dataframe.ipynb
-    - file: Slicing Dataframe.ipynb
-    - file: Filtering with Pandas compared with SQL.ipynb
-    - file: Writting SQL within Pandas.ipynb
-    - file: Renaming Columns.ipynb
-    - file: Columns cleaning.ipynb
-    - file: Columns Manipulation.ipynb
-    - file: Playing with missing values.ipynb
-    - file: Deleting Columns.ipynb
-    - file: Manipulating and Filtering Dataframe.ipynb
-    - file: Applying functions on dataframe.ipynb
-    - file: Finding n largest in Dataframe.ipynb
-    - file: Sorting in Dataframe.ipynb
-    
-   
+    - file: Chapter files/Creating Dataframes.ipynb
+    - file: Chapter files/Dataframe Inspection.ipynb
+    - file: Chapter files/Indexes.ipynb
+    - file: Chapter files/Changing the index of Dataframe.ipynb
+    - file: Chapter files/Slicing Dataframe.ipynb
+    - file: Chapter files/Filtering with Pandas compared with SQL.ipynb
+    - file: Chapter files/Writting SQL within Pandas.ipynb
+    - file: Chapter files/Renaming Columns.ipynb
+    - file: Chapter files/Columns cleaning.ipynb
+    - file: Chapter files/Columns Manipulation.ipynb
+    - file: Chapter files/Playing with missing values.ipynb
+    - file: Chapter files/Deleting Columns.ipynb
+    - file: Chapter files/Manipulating and Filtering Dataframe.ipynb
+    - file: Chapter files/Applying functions on dataframe.ipynb
+    - file: Chapter files/Finding n largest in Dataframe.ipynb
+    - file: Chapter files/Sorting in Dataframe.ipynb
