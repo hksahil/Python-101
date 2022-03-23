@@ -12,3 +12,11 @@
 # - Source: yt/chartexplorer/change column data type
 # - https://mermaid-js.github.io/mermaid/#/ - Make gantt charts,flow diagrams via markdown
 # - https://github.com/alexandresanlim/Badges4-README.md-Profile - Easy to use badges for footers
+# - https://app.learney.me/?concept=138 - path to learn ML
+# - https://seeing-theory.brown.edu/basic-probability/index.html -Probab classes
+
+# In[ ]:
+
+
+
+

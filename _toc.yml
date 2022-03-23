@@ -146,3 +146,15 @@ parts:
     - file: Chapter files/Applying functions on dataframe.ipynb
     - file: Chapter files/Finding n largest in Dataframe.ipynb
     - file: Chapter files/Sorting in Dataframe.ipynb
+ # Probability and Stats
+- caption: Stats and Probability 101
+  numbered: True
+  chapters:
+  - file: Statistics/Random Variables.ipynb
+  - file: Statistics/Expectation.ipynb
+  - file: Statistics/Variance.ipynb
+  - file: Statistics/Set Theory.ipynb
+  - file: Statistics/Conditional Probability.ipynb
+  - file: Statistics/Probability Distribution.ipynb
+  - file: Statistics/Central Limit Theorem.ipynb
+  - file: Statistics/Anova.ipynb
